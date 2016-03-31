@@ -1,0 +1,283 @@
+
+html {
+	color: #222;
+	font-size: 1em;
+	line-height: 1.55;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+	background: #b3d4fc;
+	text-shadow: none;
+}
+
+::selection {
+	background: #b3d4fc;
+	text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+	vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+	resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+	margin: 0.2em 0;
+	background: #ccc;
+	color: #000;
+	padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Стили
+   ========================================================================== */
+
+body {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+img, embed,
+object, video {
+	max-width: 100%;
+}
+
+.body-flex {
+	display: -webkit-flex;
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+
+.logo,
+.navbar,
+.slider,
+.cards,
+.footer {
+	display: -webkit-flex;
+	display: flex;
+	width: 100%;
+	/* === Нужно ли все делать flex-container'ами? === */
+}
+
+* {
+	/*outline: 1px solid grey;*/
+}
+
+.logo {
+	color: rgb(249,46,41);
+	font-size: 1.3rem;
+	/* ===== Цвет с blue ===== */
+}
+
+.logo h1 {margin: 1.3rem 0 0 0;}
+
+.navbar {
+	display:-webkit-flex;
+    display: flex;
+    flex-flow: row wrap;
+	/*background: steelblue;*/
+	/*color: white;*/
+	/*=== Убрал цвет навбара ===*/
+	padding: 0;
+    list-style-type:none;
+    width: 100%;
+}
+.navbar li {
+	/*padding: 0 1em;*/
+	padding-right: 1.9rem;
+	font-weight: bold;
+	color: rgb(85,85,85);
+	/* === Изменил padding и толщину === */
+}
+.navbar li:last-child {
+	margin-left: auto;
+	padding-right: 0;
+}
+
+.wrap {
+	/*background: steelblue;*/
+	/* === Цвет навбара убрал ===*/
+}
+
+.cards {
+	flex-flow: row wrap;
+}
+
+.c1{
+	flex-shrink: 0;
+	flex-basis: auto;
+	width: 180px;
+	flex: auto;
+	/* =======
+	Нужно сделать чтоб на ширине от 540px до 720
+	умещались по две карточки на линию
+	========== */
+}
+
+.blocks {
+	display: -webkit-flex;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+
+
+
+
+/* ==========================================================================
+   Помогающие классы
+   ========================================================================== */
+
+/*
+ * Спрятать визуально.
+ */
+.hidden {
+	display: none !important;
+}
+
+/*
+ * Спрятать визульно, но сохранить расположение.
+ */
+.invisible {
+	visibility: hidden;
+}
+
+
+/* ==========================================================================
+   Медиа запросы для адаптивной верстки.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+	/* Style adjustments for viewports that meet the condition */
+}
+
+/* ==========================================================================
+   Print стили.
+   ========================================================================== */
+
+@media print {
+	*,
+	*:before,
+	*:after,
+	*:first-letter,
+	*:first-line {
+		background: transparent !important;
+		color: #000 !important; /* Black prints faster:
+								   http://www.sanbeiji.com/archives/953 */
+		box-shadow: none !important;
+		text-shadow: none !important;
+	}
+
+	a,
+	a:visited {
+		text-decoration: underline;
+	}
+
+	a[href]:after {
+		content: " (" attr(href) ")";
+	}
+
+	abbr[title]:after {
+		content: " (" attr(title) ")";
+	}
+
+	/*
+	 * Don't show links that are fragment identifiers,
+	 * or use the `javascript:` pseudo protocol
+	 */
+
+	a[href^="#"]:after,
+	a[href^="javascript:"]:after {
+		content: "";
+	}
+
+	pre,
+	blockquote {
+		border: 1px solid #999;
+		page-break-inside: avoid;
+	}
+
+	/*
+	 * Printing Tables:
+	 * http://css-discuss.incutio.com/wiki/Printing_Tables
+	 */
+
+	thead {
+		display: table-header-group;
+	}
+
+	tr,
+	img {
+		page-break-inside: avoid;
+	}
+
+	img {
+		max-width: 100% !important;
+	}
+
+	p,
+	h2,
+	h3 {
+		orphans: 3;
+		widows: 3;
+	}
+
+	h2,
+	h3 {
+		page-break-after: avoid;
+	}
+}
