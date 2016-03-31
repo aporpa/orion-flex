@@ -118,11 +118,13 @@ object, video {
 
 .logo {
 	color: rgb(249,46,41);
-	font-size: 1.3rem;
+	font-size: 1.7rem;
+	padding: 0;
+	margin: 0;
 	/* ===== Цвет с blue ===== */
 }
 
-.logo h1 {margin: 1.3rem 0 0 0;}
+.logo h1 {margin: 0;padding: 0;position: relative;top: .7rem;}
 
 .navbar {
 	display:-webkit-flex;
@@ -142,9 +144,16 @@ object, video {
 	color: rgb(85,85,85);
 	/* === Изменил padding и толщину === */
 }
-.navbar li:last-child {
+.navbar .right {
 	margin-left: auto;
 	padding-right: 0;
+}
+
+.right li {
+	display: inline;
+	padding-right: 0;
+	padding-left: 1.9rem;
+	/* === Какая-то дичь со списками === */
 }
 
 .wrap {
@@ -161,6 +170,10 @@ object, video {
 	flex-basis: auto;
 	width: 180px;
 	flex: auto;
+
+	padding: .5rem;
+	justify-content: space-between;
+
 	/* =======
 	Нужно сделать чтоб на ширине от 540px до 720
 	умещались по две карточки на линию
@@ -174,7 +187,13 @@ object, video {
 	justify-content: space-between;
 }
 
+.slider { /* === Избавляться от этого мусора === */
+	padding: 1rem 0;
+}
 
+hr {
+	/*margin: 0;*/
+}
 
 
 
