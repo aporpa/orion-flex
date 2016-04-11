@@ -84,9 +84,22 @@ textarea {
    Стили
    ========================================================================== */
 
-body {
+* {
+	/*outline: 1px solid grey;*/
+}
+
+/*body {
 	max-width: 960px;
 	margin: 0 auto;
+}*/
+
+header,
+nav
+.blocks,
+.cards,
+footer {
+	max-width: 960px;
+	margin: 0 auto !important;
 }
 
 img, embed,
@@ -94,74 +107,66 @@ object, video {
 	max-width: 100%;
 }
 
-.body-flex {
-	display: -webkit-flex;
-	display: flex;
-	flex-flow: column nowrap;
-}
+/*.body-flex {  }*/
+/*=== Удалил .container обертку ===*/
+
+/*=== Проверять являются ли группирующие
+	элементы flex контейнерами ===*/
 
 
-.logo,
-.navbar,
-.slider,
-.cards,
-.footer {
-	display: -webkit-flex;
-	display: flex;
-	width: 100%;
-	/* === Нужно ли все делать flex-container'ами? === */
-}
-
-* {
-	/*outline: 1px solid grey;*/
-}
-
-.logo {
+header {
 	color: rgb(249,46,41);
-	font-size: 1.7rem;
 	padding: 0;
 	margin: 0;
 	/* ===== Цвет с blue ===== */
 }
 
-.logo h1 {margin: 0;padding: 0;position: relative;top: .7rem;}
-
-.navbar {
-	display:-webkit-flex;
-    display: flex;
-    flex-flow: row wrap;
-	/*background: steelblue;*/
-	/*color: white;*/
-	/*=== Убрал цвет навбара ===*/
+header h1 {
+	margin: 0;
 	padding: 0;
-    list-style-type:none;
-    width: 100%;
+	position: relative;
+	top: .7rem;
+	font-size: 2.5rem;
 }
-.navbar li {
-	/*padding: 0 1em;*/
-	padding-right: 1.9rem;
-	font-weight: bold;
-	color: rgb(85,85,85);
-	/* === Изменил padding и толщину === */
-}
+
+nav .navbar {
+	display:-webkit-flex;
+	display: flex;
+	flex-flow: row nowrap;
+	padding: 0;
+	list-style-type:none;
+	width: 100%;
+} .navbar li {
+		padding-right: 1.9rem;
+		font-weight: bold;
+		color: rgb(85,85,85);
+	}
+
 .navbar .right {
-	margin-left: auto;
-	padding-right: 0;
+		margin-left: auto;
+		padding-right: 0;
+	} .right li {
+			display: inline;
+			padding-right: 0;
+			padding-left: 1.9rem;
+			/* === Какая-то дичь со списками === */
+		}
+
+.blocks {
+	display: -webkit-flex;
+	display: flex;
+	width: 960px;
+	margin: 0 auto;
+	justify-content: space-between;
 }
 
-.right li {
-	display: inline;
-	padding-right: 0;
-	padding-left: 1.9rem;
-	/* === Какая-то дичь со списками === */
-}
-
-.wrap {
-	/*background: steelblue;*/
-	/* === Цвет навбара убрал ===*/
+.slider { /* === Избавляться от этого мусора === */
+	padding: 1rem 0;
 }
 
 .cards {
+	display: -webkit-flex;
+	display: flex;
 	flex-flow: row wrap;
 }
 
@@ -180,20 +185,17 @@ object, video {
 	========== */
 }
 
-.blocks {
-	display: -webkit-flex;
-	display: flex;
-	width: 100%;
-	justify-content: space-between;
-}
-
-.slider { /* === Избавляться от этого мусора === */
-	padding: 1rem 0;
+footer p {
+	text-align: center;
+	font-size: .9rem;
+	color: rgb(102,102,102);
 }
 
 hr {
 	/*margin: 0;*/
 }
+
+
 
 
 

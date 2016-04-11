@@ -20,77 +20,67 @@
 			<p class="browserupgrade">Вы используете <strong>устаревший</strong> браузер.Пожалуйста <a href="http://browsehappy.com/">обновите его</a> для лучшего отображения страниц.</p>
 		<![endif]-->
 
-
-<div class="body-flex">
-<!-- === Нужна ли эта body-flex обертка === -->
 	
-	<div class="logo">
-	<!-- === Это называется header === -->
-		<h1>ОРИОН</h1>
-	</div>
-	
-	<div class="wrap">
-	<!-- === Зачем wrap? === -->
+<header>
+	<h1>ОРИОН</h1>
+	<nav>
 		<ul class="navbar">
 			<li>Меню</li>
 			<li>Фотки</li>
 			<li>Люди</li>
 			<li>Акции</li>
 			<li>Отзывы</li>
-			<!-- <li>Адрес</li> -->
-			<!-- <li class="right">8 964 007 02 05</li> -->
 			<div class="right">
 				<li>Корзина</li>
 				<li>Заказать</li>
 			</div>
-			
 		</ul>
-		<hr>
-	</div>
+	</nav>
+</header>
 
-	<div class="blocks">
-		<div class="b1">
-			<img src="http://placehold.it/300x120">
-			<!-- === Подправить верстку, с учетом flex-basis === -->
-		</div>
-		<div class="b2">
-			<img src="http://placehold.it/300x120">
-		</div>
-		<div class="b3">
-			<img src="http://placehold.it/300x120">
-		</div>
-	</div>
-	
-	<div class="slider">
-		<img src="http://placehold.it/960x310" alt="">
-	</div>
-	
-	<div class="cards">
-	<!-- === Поменять div'ы на section? === -->
-		<div class="c1">
-			<img src="tile.png" alt="">
-			<h4>Галерея</h4>
-		</div>
-		<div class="c1">
-			<img src="tile.png" alt="">
-			<h4>События</h4>
-		</div>
-		<div class="c1">
-			<img src="tile.png" alt="">
-			<h4>Вакансии</h4>
-		</div>
-		<div class="c1">
-			<img src="tile.png" alt="">
-			<h4>Адрес</h4>
-		</div>
-	</div>
-	<hr>
-	
-	<div class="footer">
-		<p>Компания Орион, 2016.</p>
-	</div>
+<hr>
 
+<div class="blocks">
+	<section>
+		<img src="http://placehold.it/300x120">
+		<!-- === Подправить верстку, с учетом flex-basis === -->
+	</section>
+	<section>
+		<img src="http://placehold.it/300x120">
+	</section>
+	<section>
+		<img src="http://placehold.it/300x120">
+	</section>
 </div>
+
+<main class="slider">
+	<img src="http://placehold.it/1280x360" alt="">
+</main>
+
+<div class="cards">
+	<section class="c1">
+		<img src="tile.png" alt="">
+		<h4>Фотки</h4>
+	</section>
+	<section class="c1">
+		<img src="tile.png" alt="">
+		<h4>Акции</h4>
+	</section>
+	<section class="c1">
+		<img src="tile.png" alt="">
+		<h4>Вакансии</h4>
+	</section>
+	<section class="c1">
+		<img src="tile.png" alt="">
+		<h4>Адрес</h4>
+	</section>
+</div>
+<hr>
+
+<footer>
+	<p>Орион 2016</p>
+</footer>
+
 
 
 <!-- <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script> -->
